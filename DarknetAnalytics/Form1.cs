@@ -199,14 +199,14 @@ namespace DarknetAnalytics
 
         private void chkMoveFileDetected_CheckedChanged(object sender, EventArgs e)
         {
-            txtMoveFile1.Enabled = chkMoveFileDetected.Enabled;
+            txtMoveFile1.Enabled = chkMoveFileDetected.Checked;
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         private void chkMoveFileNotDetect_CheckedChanged(object sender, EventArgs e)
         {
-            txtMoveFile2.Enabled = chkMoveFileNotDetect.Enabled;
+            txtMoveFile2.Enabled = chkMoveFileNotDetect.Checked;
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -235,8 +235,7 @@ namespace DarknetAnalytics
                 }
                 else
                 {
-                    Directory.CreateDirectory(txtMoveFile1.Text);
-                    TGMTregistry.GetInstance().SaveValue("txtMoveFile1", txtMoveFile1.Text);
+                    Directory.CreateDirectory(txtMoveFile1.Text);                    
                 }
             }
 
@@ -250,8 +249,7 @@ namespace DarknetAnalytics
                 }
                 else
                 {
-                    Directory.CreateDirectory(txtMoveFile2.Text);
-                    TGMTregistry.GetInstance().SaveValue("txtMoveFile2", txtMoveFile2.Text);
+                    Directory.CreateDirectory(txtMoveFile2.Text);                    
                 }
             }
 
@@ -679,6 +677,21 @@ namespace DarknetAnalytics
         private void cb_weight_TextChanged(object sender, EventArgs e)
         {
             btnAnalytics.Enabled = false;
+        }
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        private void txtMoveFile1_TextChanged(object sender, EventArgs e)
+        {
+            TGMTregistry.GetInstance().SaveValue("txtMoveFile1", txtMoveFile1.Text);
+        }
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        private void txtMoveFile2_TextChanged(object sender, EventArgs e)
+        {
+            TGMTregistry.GetInstance().SaveValue("txtMoveFile2", txtMoveFile2.Text);
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////

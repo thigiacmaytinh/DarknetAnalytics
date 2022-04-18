@@ -215,6 +215,7 @@ namespace DarknetAnalytics
             this.txtMoveFile2.Name = "txtMoveFile2";
             this.txtMoveFile2.Size = new System.Drawing.Size(308, 20);
             this.txtMoveFile2.TabIndex = 18;
+            this.txtMoveFile2.TextChanged += new System.EventHandler(this.txtMoveFile2_TextChanged);
             // 
             // txtMoveFile1
             // 
@@ -223,6 +224,7 @@ namespace DarknetAnalytics
             this.txtMoveFile1.Name = "txtMoveFile1";
             this.txtMoveFile1.Size = new System.Drawing.Size(308, 20);
             this.txtMoveFile1.TabIndex = 17;
+            this.txtMoveFile1.TextChanged += new System.EventHandler(this.txtMoveFile1_TextChanged);
             // 
             // chkMoveFileNotDetect
             // 
